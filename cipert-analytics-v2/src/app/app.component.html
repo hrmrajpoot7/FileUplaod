@@ -1,0 +1,127 @@
+<div class="container">
+    <div class="row mt-sm-4">
+        <div class="alert alert-primary text-center" role="alert">
+            <h2>Welcome to Cipert Analytics</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-primary mb-3">
+                    <div class="card-header text-center">
+                        <img src="assets/images/sr-logo.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body text-center">
+                        <div>
+                            <button type="button" class="btn btn-primary mb-3"
+                                (click)="btnSubscribeSales($event)">{{salesValue}}</button>
+                            <br>
+                            <button *ngIf="showUploadSales" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#uploadModalSales">
+                                Upload Data
+                            </button>
+
+                            <!-- popup window -->
+                            <div class="modal fade" id="uploadModalSales" tabindex="-1"
+                                aria-labelledby="uploadModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="uploadModalLabel">Choose file to upload</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="file" multiple="multiple" (change)="onFileChange($event)">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                                (click)="submitSalesButton($event)">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-primary mb-3">
+                    <div class="card-header card-header-large text-center">Production Report</div>
+                    <div class="card-body text-center">
+                        <button type="button" class="btn btn-primary mb-3"
+                            (click)="btnSubscribeProduction($event)">{{productionValue}}</button>
+                        <br>
+                        <button *ngIf="showUploadProduction" type="button" class="btn btn-primary"
+                            data-bs-toggle="modal" data-bs-target="#uploadModalProduction">
+                            Upload Data
+                        </button>
+
+                        <!-- popup window -->
+                        <div class="modal fade" id="uploadModalProduction" tabindex="-1"
+                            aria-labelledby="uploadModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="uploadModalLabel">Choose file to upload</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="file" multiple="multiple" (change)="onFileChange($event)">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                            (click)="submitProductionButton($event)">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-primary mb-3">
+                    <div class="card-header card-header-large text-center">Vendor Performance</div>
+                    <div class="card-body text-center">
+                        <button type="button" class="btn btn-primary mb-3"
+                            (click)="btnSubscribeVendor($event)">{{vendorValue}}</button>
+                        <br>
+                        <button *ngIf="showUploadVendor" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#uploadModalVendor">
+                            Upload Data
+                        </button>
+
+                        <!-- popup window -->
+                        <div class="modal fade" id="uploadModalVendor" tabindex="-1" aria-labelledby="uploadModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="uploadModalLabel">Choose file to upload</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="file" multiple="multiple" (change)="onFileChange($event)">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                            (click)="submitVendorButton($event)">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
